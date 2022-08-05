@@ -1,0 +1,56 @@
+	const pickImage = async () => {
+		let result = await ImagePicker.launchImageLibraryAsync({
+			mediaTypes: ImagePicker.MediaTypeOptions.Images,
+			allowsEditing: true,
+			aspect: [4, 4],
+			quality: 1,
+		});
+
+		if (!result.cancelled) {
+			if (isMounted()) setImage(result.uri);
+		}
+	};
+
+	const uploadImage = async () => {
+		var storage = firebase.storage();
+
+		const uploadedUri = image;
+
+		const response = await fetch(uploadedUri);
+		const blob = await response.blob();
+
+		let filename = uploadedUri.substring(uploadedUri.lastIndexOf('/') + 1);
+
+		const extension = filename.split('.').pop();
+		const name = filename.split('.').splice(0, -1).join('.');
+		filename = name + Date.now() + '.' + extension;
+
+		const storageRef = storage.ref(`Employees/${filename}`);
+
+		const task = storageRef.put(blob);
+		task.on('state_changed', (taskSnapshot) => {
+			console.log(
+				Math.round(taskSnapshot.bytesTransferred / taskSnapshot.totalBytes) *
+					100
+			);
+		});
+
+		try {
+			await task;
+			const url = await storageRef.getDownloadURL();
+			return url;
+		} catch (e) {
+			console.log(e);
+			return null;
+		}
+	};
+
+
+
+					<Imagebackground
+					image={image}
+					placeholder={
+						'https://coenterprises.com.au/wp-content/uploads/2018/02/male-placeholder-image.jpeg'
+					}
+					onPress={() => pickImage()}
+				/>

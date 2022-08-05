@@ -1,0 +1,89 @@
+1 Dashboard - Assets *
+            - Assigned Assets *
+            - Unassigned Assets  *
+            - Vendors *
+            - Product *
+            - Employees *
+            - Locations *
+            - Recent Activities
+
+2 Vendors   - Add Vendors   - Vendor Name * eg. Adobe, Microsoft
+                            - Email *
+                            - Phone *
+                            - Contact Person *
+                        
+            - Vendor Details- Above Info, Status and when and who added 
+            - List          - Above Info, Status *
+
+3 Products  - Add Product   - Choose category * Cloud Infrasture, Networking, hardware, Software and others
+                            - Product Type *
+                            - Product Name * eg. Adobe Photoshop CC, Office 360
+                            - Manufacture * e.g Adobe, Microsoft
+                            - Description *
+            - List          - Above Information and status
+
+4 Assets    - Add Assets    - Product category *: Cloud Infrasture, Networking, hardware, Software and others
+                            - Product Type * eg. Computer, Mobile Device, office Accessories
+                            - Product * (Choose from added Product) eg. Acer Laptop
+                            - Vendor * (Choose from added Vendor)
+                            - Asset Name * eg. Acer Aspire 5
+                            - Serial Number *
+                            - Price *
+                            - Location *
+                            - Purchase date *
+                            - Warranty Expiry Date *
+                            - Purchase Type * eg Owned, Rented, Leased, Subscription
+                            - Description *
+
+            - List          - Name
+                            - Serial Number
+                            - Product Type
+                            - Product
+                            - Vendor
+                            - Current state eg. In Store, In Use, Expired, Repair, Disposed
+
+            - Assign Assets - Product category: Cloud Infrasture, Networking, hardware, Software and others
+                            - Product Type eg. Computer, Mobile Device, office Accessories
+                            - Product (Choose from added Product) eg. Acer Laptop
+                            - Vendor (Choose from added Vendor)
+                            - Location
+                            - Asset Name
+                            - Departments
+                            - Assign To 
+            
+            - Assigned Assets List
+                            - Asset Name
+                            - Department
+                            - Location
+                            - Assigned To
+                            - Current state: In Use
+                            - Re-Assign
+
+5. Admin    - Add Locations - Office Name *            ** Multiple brances
+                            - Full Address *
+                            - Contact Person *
+                            - Contact Person Email *
+                            - Contact Person Phone *
+            
+            - Notification  - Software License Expiry       ** set when to send Notification 7 day, 15 days, 30 days
+                            - Hardware License Expiry
+
+
+            - Add Departments   eg. Sales, IT, Finance, Adminstration etc
+                            - Department Name *
+                            - Contact Person *
+                            - Contact Person Email *
+                            - Contact Person Phone *
+
+            - Add Employee  - Name   * 
+                            - Employee Number * 
+                            - Email *
+                            - Phone *
+                            - Password 
+                            - User Role eg. Admin && Employee *
+                            - Department *
+
+
+
+
+** Be Able To Upload Location, Employees, Department using a csv file
